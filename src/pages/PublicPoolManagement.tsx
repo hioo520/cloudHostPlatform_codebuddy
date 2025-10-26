@@ -15,6 +15,7 @@ import {
 import { SearchOutlined, ReloadOutlined, TeamOutlined } from '@ant-design/icons'
 
 const { Title } = Typography
+const { Option } = Select
 
 const PublicPoolManagement: React.FC = () => {
   const [form] = Form.useForm()

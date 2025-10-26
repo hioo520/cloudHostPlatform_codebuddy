@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           <BellOutlined style={{ color: 'white', fontSize: '18px', cursor: 'pointer' }} />
         </Badge>
         
-        <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
+        <Dropdown menu={{ items: userMenuItems as any }} placement="bottomRight">
           <Space style={{ cursor: 'pointer' }}>
             <Avatar size="small" icon={<UserOutlined />} />
             <span style={{ color: 'white' }}>管理员</span>

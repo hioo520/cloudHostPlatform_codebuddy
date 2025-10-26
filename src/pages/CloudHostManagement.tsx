@@ -29,7 +29,7 @@ const { Option } = Select
 
 const CloudHostManagement: React.FC = () => {
   const dispatch = useAppDispatch()
-  const { hosts, loading, searchParams } = useAppSelector((state) => state.cloudHost)
+  const { hosts, loading } = useAppSelector((state) => state.cloudHost)
   const [form] = Form.useForm()
   const [modalVisible, setModalVisible] = useState(false)
   const [editingHost, setEditingHost] = useState<any>(null)
@@ -115,7 +115,7 @@ const CloudHostManagement: React.FC = () => {
       }
     }
     
-    const config = statusMap[type][status]
+    const config = (statusMap as any)[type][status]
     return <Tag color={config.color}>{config.text}</Tag>
   }
 
